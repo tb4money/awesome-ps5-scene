@@ -62,11 +62,11 @@ Applications compiled specifically for the console's operating architecture usin
 
 Virtalization platforms optimized to run classic computing architectures natively on modern hardware.
 
-*   **[swordpdf PS5SX PS5 Port]https://github.com/Swordpdf/PS5SX2 - a native port of PCSX2 to PS5 including 6x resolution .iso .chd .zso support patches/widescreen online play and more.
+*   **[swordpdf PS5SX PS5 Port]https://github.com/Swordpdf/PS5SX2** - a native port of PCSX2 to PS5 including 6x resolution .iso .chd .zso support patches/widescreen online play and more.
 *   **[mihawk-99 RetroArch PS5 Port]https://github.com/mihawk-99/PS5_RetroArch** - Work-in-progress deployment of the modular frontend emulation framework targeting unlocked firmwares.
-*   **[ZiZc3 XPSemu Xemu PS5 Port]https://github.com/ZiZc3/XPSemu - a original xbox emulator native on ps5.
-*   **blackbearreloaded Eden PS5 Port]https://github.com/blackbearreloaded/ProsperoEden - A switch emulator native on ps5 resolution settings, mods, and more.
-*   **[elripalda Dolphin PS5 Port]https://github.com/elripalda/Porpoise-Dolphin-Emulator-for-PS5 - A wii and gamecube emulator native on the PS5 up to 4x resolution, mods, and more
+*   **[ZiZc3 XPSemu Xemu PS5 Port]https://github.com/ZiZc3/XPSemu** - a original xbox emulator native on ps5.
+*   **blackbearreloaded Eden PS5 Port]https://github.com/blackbearreloaded/ProsperoEden** - A switch emulator native on ps5 resolution settings, mods, and more.
+*   **[elripalda Dolphin PS5 Port]https://github.com/elripalda/Porpoise-Dolphin-Emulator-for-PS5** - A wii and gamecube emulator native on the PS5 up to 4x resolution, mods, and more
 ---
 
 ## 💾 Alternative OS & Linux
