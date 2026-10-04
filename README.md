@@ -2,7 +2,7 @@
 
 > A curated list of high-quality PlayStation 5 (PS5) homebrew, exploits, payloads, emulators, and system utilities.
 
-<img src="https://githubusercontent.com" align="right" width="120" alt="Awesome Logo" />
+<img src="https://githubusercontent.com" align="right" width="120" alt="[![Awesome](https://awesome.re/badge-flat.svg)](https://awesome.re)" />
 
 This list focuses strictly on **homebrew development, system diagnostics, and hardware virtualization**. It serves as a comprehensive reference guide for developers and enthusiasts looking to safely interface with the PlayStation 5 ecosystem.
 
