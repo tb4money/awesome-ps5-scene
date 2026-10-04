@@ -1,143 +1,132 @@
 # Awesome PS5 Homebrew & Scene [![Awesome](https://awesome.re/badge-flat.svg)](https://awesome.re)
 
-> A curated list of high-quality PlayStation 5 (PS5) homebrew, exploits, payloads, emulators, and system utilities.
+> A curated collection of working PlayStation 5 (PS5) homebrew projects, exploit implementations, payloads, emulators, and low-level development utilities.
 
-This list focuses strictly on **homebrew development, system diagnostics, hardware virtualization, and open-source documentation**. It serves as a comprehensive reference guide for developers and enthusiasts looking to safely interface with the PlayStation 5 ecosystem.
+This repository catalogs open-source projects, reverse-engineering documentation, and software environments built by the console scene. 
 
-⚠️ **Strict Policy:** Content regarding piracy, commercial game backups, illicit distribution networks, or leaked cryptographic keys is strictly banned and will be immediately rejected.
-
----
-
-## 🗺️ Navigation Menu
-
-[Contributing Guidelines](contributing.md) • [Code of Conduct](code-of-conduct.md) • [Official Website](https://awesome.re) • [Community Forum](#-resources--communities)
+⚠️ **Strict Anti-Piracy Policy:** This list is strictly dedicated to homebrew creation, system security research, and custom emulation layers. Links to commercial game backups, cracked security keys, or illicit distribution channels are strictly prohibited and will be rejected immediately.
 
 ---
 
 ## 📑 Contents
 
 - [Firmware & Exploit Status](#-firmware--exploit-status)
-- [Web Exploits & Hosts](#-web-exploits--hosts)
-- [Payloads & Kernels](#-payloads--kernels)
-- [Homebrew Apps](#-homebrew-apps)
+- [Web Exploits & Entry Points](#-web-exploits--entry-points)
+- [Kernel Exploits & Payloads](#-kernel-exploits--payloads)
+- [Native Homebrew Apps](#-native-homebrew-apps)
 - [Emulators](#-emulators)
-- [Media & Operating Systems](#-media--operating-systems)
+- [Alternative OS & Linux](#-alternative-os--linux)
 - [PC & Development Tools](#-pc--development-tools)
-- [Hardware Interfacing & Mods](#-hardware-interfacing--mods)
-- [Upcoming Tools & Research](#-upcoming-tools--research)
-- [Resources & Communities](#-resources--communities)
+- [Hardware Interfacing & UART](#-hardware-interfacing--uart)
+- [Research Documentation](#-research-documentation)
+- [Scene Resources & News](#-scene-resources--news)
 
 ---
 
 ## 🔑 Firmware & Exploit Status
 
-A chronological breakdown of vulnerable firmware thresholds, entry points, and active capabilities. Keep your console offline and do not update if you intend to run custom code.
+Console security states are defined entirely by your system firmware revision. If you want to run custom code, keep your system completely offline and do not update.
 
-*   **Firmware 1.xx - 2.xx** — Baseline hardware revisions. Highly vulnerable, historically significant for early hypervisor reverse-engineering and native hardware research.
-*   **Firmware 3.00 - 4.51** — The active "Golden Era" firmware range. Features full native stability for WebKit and BD-J kernel exploits, providing a robust environment for homebrew frameworks.
-*   **Firmware 5.00 - 7.61** — WebKit and IPv6 userland entry points are accessible. Active ongoing research applies kernel exploit implementations (such as `bypervisor`) to these layers.
-*   **Firmware 8.00+** — Modern patched territory. No public kernel entry points exist. 
-
----
-
-## 🌐 Web Exploits & Hosts
-
-Web services, self-hosted local server engines, and public deployment entry points used to trigger initial userland escapes.
-
-*   **[ETAHEN Host Placeholder](https://github.com)** - [PLACEHOLDER] Publicly hosted exploit selection menu configured for reliable 3.xx-4.xx execution chains.
-*   **[Local Exploit Host Placeholder](https://github.com)** - [PLACEHOLDER] Python or Node-based lightweight local server deployment script to run exploits offline.
-*   **[Webkit Proof-of-Concept Placeholder](https://github.com)** - [PLACEHOLDER] Up-to-date raw repository targeting specific userland vulnerabilities across higher firmwares.
+*   **Firmwares 1.00 - 2.50** — Vintage launch-era software. Highly sought after for low-level architecture mapping and hypervisor vulnerability research.
+*   **Firmwares 3.00 - 4.51** — The definitive homebrew target. Native compatibility with the WebKit/BD-J userland entry points paired with the IPV6 kernel exploit. Full write access to system memory via stable payload environments.
+*   **Firmwares 5.00 - 7.61** — The UMTX vulnerability threshold. These firmwares leverage the `bypervisor` implementation of the UMTX kernel exploit via the WebKit userland. Offers kernel read/write primitives, though hypervisor constraints remain active.
+*   **Firmwares 8.00 - 9.60** — Userland access limits. Vulnerable to the `PPPwn` PPPoE network stack exploit and specific WebKit entry points, but lacking a public, stable kernel-level execution chain.
+*   **Firmwares 10.00+** — Patched territory. Safe from all known public software entry points. 
 
 ---
 
-## 🚀 Payloads & Kernels
+## 🌐 Web Exploits & Entry Points
 
-Software designed to escape native application sandboxes, inject custom code, or establish post-exploit execution environments.
+Browser environments, network stack mutations, and hosting utilities used to secure userland code execution.
 
-*   **[ETAHEN](https://github.com)** - The premier PS5 Homebrew Enabler featuring an integrated FTP server, a cheat engine, and active plugin loading support.
-*   **[Libhijacker](https://github.com)** - Advanced utility designed to break out of the PS5 application sandbox and run arbitrary background processes.
-*   **[PS5-kStuff](https://github.com)** - Kernel patch framework allowing the execution of unsigned code and customized homebrew fPBRs.
-*   **[PS5-Payload-ElfLoader](https://github.com)** - An ELF payload loader that listens on a dedicated network port to boot code directly onto exploited consoles.
-*   **[Custom Kernel Plugin Placeholder](https://github.com)** - [PLACEHOLDER] A kernel-level extension payload designed to patch background system instructions or hardware calls.
+*   **[BD-JB Host Core](https://github.com)** - Blu-ray Disc Java sandbox escape scripts utilized to kickstart code execution on disc-drive equipped hardware.
+*   **[PPPwn PS5 Port](https://github.com)** - A network-based PPPoE exploit configuration that targets memory corruption inside the console's network stack.
+*   **[UMTX WebKit Implementation](https://github.com)** - [PLACEHOLDER] Front-end browser scripts configured to trigger the UMTX kernel vulnerability on firmwares up to 7.61.
 
 ---
 
-## 🎮 Homebrew Apps
+## 🚀 Kernel Exploits & Payloads
 
-Applications built natively by the community using open-source toolchains to run directly on your retail hardware.
+Post-exploit software binaries that escape app sandboxes, patch system functions, or establish local listeners.
 
-*   **[HWInfo-PS5](https://github.com)** - System diagnostic tool displaying live hardware telemetry including fan duty cycles, SoC temperatures, and frequency scaling.
-*   **[Mast1c0re Network Game Loader](https://github.com)** - Bootstraps local network payloads using the PS4 `OKAGE: Shadow King` save-game exploit layer.
-*   **[PS5 Homebrew Store](https://github.com)** - An on-console graphical package manager used to download, update, and manage community applications over the air.
-*   **[File Manager Homebrew Placeholder](https://github.com)** - [PLACEHOLDER] A graphical shell app used to browse internal `/data` partition structures directly from the UI.
-*   **[Save Game Mounter Placeholder](https://github.com)** - [PLACEHOLDER] Utility designed to safely mount, backup, or transfer user-generated native application save data via USB.
+*   **[ETAHEN](https://github.com)** - The standard homebrew enabler for the platform, bundling an integrated FTP engine, plugin systems, and cheat managers.
+*   **[Libhijacker](https://github.com)** - Run-time modification framework designed to break out of retail app constraints and sustain active background execution threads.
+*   **[PS5-kStuff](https://github.com)** - A kernel-level patch implementation used to authorize the execution of unsigned fPBR files.
+*   **[PS5-Payload-ElfLoader](https://github.com)** - A local network daemon that maps to an open TCP port on the console, waiting to execute incoming `.elf` payloads.
+
+---
+
+## 🎮 Native Homebrew Apps
+
+Applications compiled specifically for the console's operating architecture using community SDK environments.
+
+*   **[HWInfo-PS5](https://github.com)** - Hardware monitor displaying live internal fan cycles, SoC temperatures, and active core clocks.
+*   **[Mast1c0re Network Game Loader](https://github.com)** - Injector client that targets the built-in PS4 backward compatibility layers via manipulated save games.
+*   **[PS5 Homebrew Store](https://github.com)** - Graphical storefront interface allowing users to browse, download, and patch community applications directly from the console UI.
+*   **[File Manager Placeholder](https://github.com)** - [PLACEHOLDER] A visual shell app built to navigate user directories on the internal `/data` partition.
 
 ---
 
 ## 🕹️ Emulators
 
-Software designed to repurpose native hardware execution layers for retro gaming and system virtualization.
+Virtalization platforms optimized to run classic computing architectures natively on modern hardware.
 
-*   **[Mast1c0re PS1/PS2 Emulator](https://github.com)** - Utilizes native, built-in backward compatibility layers inside the console to run classic software safely via sandbox escapes.
-*   **[RetroArch PS5 Port](https://github.com)** - Ongoing development port bringing the universal modular emulation frontend to vulnerable PS5 systems.
-*   **[Standalone Core Emulator Placeholder](https://github.com)** - [PLACEHOLDER] A dedicated, fully optimized native engine port focused on hyper-precise arcade or classic computing system replication.
+*   **[Mast1c0re PS1/PS2 Layer](https://github.com)** - Practical implementations targeting the console's native, internal PS2 emulation runtime using sandbox bypasses.
+*   **[RetroArch PS5 Port](https://github.com)** - Work-in-progress deployment of the modular frontend emulation framework targeting unlocked firmwares.
 
 ---
 
-## 💾 Media & Operating Systems
+## 💾 Alternative OS & Linux
 
-Alternative operating system environments, alternate bootloaders, and rich hardware virtualization software layers.
+Custom boot environments, alternative kernels, and hardware-accelerated Linux distributions.
 
-*   **[Linux Kernel PS5 Port Placeholder](https://github.com)** - [PLACEHOLDER] Active distribution trees targeting custom GPU driver acceleration and system hardware mapping for the console's architecture.
-*   **[Native Media Player Placeholder](https://github.com)** - [PLACEHOLDER] Custom front-end layout utility written to stream uncompressed container video arrays over local network shares.
+*   **[PS5 Linux Kernel Fork](https://github.com)** - [PLACEHOLDER] Source modifications aiming to map individual hardware targets, including early attempts at custom Southbridge and GPU acceleration.
 
 ---
 
 ## 🛠️ PC & Development Tools
 
-Desktop software and compilation frameworks required to build payloads, run network utilities, or interface with an exploited console.
+Desktop compiler toolchains, network utilities, and decompilation resources used to build or parse payload binaries.
 
-*   **[Netcat GUI](https://github.com)** - A streamlined desktop application built to broadcast compiled `.elf` payloads to a console's local IP address.
-*   **[PS5-Payload-SDK](https://github.com)** - A complete, open-source software development kit utilizing LLVM/Clang for compiling custom C/C++ payloads.
-*   **[Prosper0g](https://github.com)** - Official diagnostic utility infrastructure scripts used to interact with early system maintenance components.
-*   **[ELF Disassembler Mapping Placeholder](https://github.com)** - [PLACEHOLDER] Configuration layouts or function definition maps used to decipher software dumps via IDA Pro or Ghidra.
-
----
-
-## 🔌 Hardware Interfacing & Mods
-
-Open hardware modifications, microchip controller configurations, flashing tools, and logic analyzers.
-
-*   **[UART Diagnostic Extraction Placeholder](https://github.com)** - [PLACEHOLDER] Documentation and scripting engines utilized to hook into physical motherboard contact pads for low-level serial system messaging.
-*   **[Glitcher Hardware Firmware Placeholder](https://github.com)** - [PLACEHOLDER] Custom microcontroller code written to run low-level memory interface timing assertions or diagnostics.
+*   **[Netcat GUI](https://github.com)** - Minimalist desktop dashboard used to broadcast compiled `.elf` assets to a designated local network IP.
+*   **[Prosper0g](https://github.com)** - Official diagnostics and scripts built to read out early firmware structures and configuration layers.
+*   **[PS5-Payload-SDK](https://github.com)** - Complete C/C++ development environment built on LLVM/Clang to facilitate native software compilation.
 
 ---
 
-## 🔮 Upcoming Tools & Research
+## 🔌 Hardware Interfacing & UART
 
-Active repositories containing architectural documentation, security papers, and proof-of-concept software updates.
+Motherboard revisions, serial communication interfaces, hardware glitching setups, and diagnostic trace methods.
 
-*   **[BD-JB Exploitation Core](https://github.com)** - Blu-ray Disc Java sandbox escapes utilized to trigger arbitrary code execution on disc-drive compatible consoles.
-*   **[PS5 Hypervisor Research](https://github.com)** - In-depth architectural analysis and exploit documentation targeting the PS5 secure hypervisor layers by fail0verflow.
-*   **[PPPwn PS5 Port](https://github.com)** - Experimental network stack implementation modifying the PPPoE vulnerability to target higher firmware thresholds.
+*   **[UART Serial Logging Guide](https://github.com)** - [PLACEHOLDER] Schematic diagrams and console terminal setup steps detailing how to solder to the motherboard's TX/RX contact pads for low-level crash output logs.
 
 ---
 
-## 🌐 Resources & Communities
+## 🔮 Research Documentation
 
-Centralized knowledge hubs, staging sites, and community forums tracking live developments within the PlayStation scene.
+In-depth technical write-ups, vulnerability disclosures, and architectural security breakdowns.
 
-*   **[PS5 Exploits Guide](https://moddedintentions.com)** - The definitive step-by-step documentation guide for safely identifying, configuring, and maintaining low-firmware consoles.
-*   **[PSX-Place PS5 Forum](https://psx-place.com)** - Longstanding scene message boards featuring developer logs, community support threads, and hardware troubleshooting.
-*   **[Wololo.net](https://wololo.net)** - A news aggregator providing daily updates on cryptographic disclosures, security conferences, and open-source project releases.
+*   **[Bypervisor Exploit Notes](https://github.com)** - [PLACEHOLDER] Security write-up detailing the structure of the UMTX kernel vulnerability and its behavior alongside the hypervisor.
+*   **[PS5 Hypervisor Disclosures](https://github.com)** - Whitepapers and assembly documentation detailing secure memory structures and privilege levels by fail0verflow.
+
+---
+
+## 🌐 Scene Resources & News
+
+Aggregators and community databases hosting configuration files, step-by-step documentation, and verified release logs.
+
+*   **[PS5 Exploits Interactive Guide](https://moddedintentions.com)** - Step-by-step breakdown used to verify firmware versions and configure safe DNS filtering setups.
+*   **[PSX-Place Community Index](https://psx-place.com)** - Active developer forums housing hardware troubleshooting advice, technical logs, and release alerts.
+*   **[Wololo.net Blog](https://wololo.net)** - Longstanding platform news portal covering exploit disclosures, developer presentation notes, and open-source updates.
 
 ---
 
 ## 🤝 Contribute
 
-Contributions are highly encouraged! Please review the [Contribution Guidelines](contributing.md) to learn about our repository structure, link formatting rules, and strict quality control standards before opening a pull request.
+Contributions are welcome! Please read the [Contribution Guidelines](contributing.md) to inspect our repository structural layout, lint rules, and alphabetical sorting requirements before opening a pull request.
 
 ## 📝 License
 
 [![CC0](https://licensebuttons.net)](https://creativecommons.org)
 
+To the extent possible under law, all contributors have waived copyright and related or neighboring rights to this repository under the **CC0-1.0 Universal License**.
