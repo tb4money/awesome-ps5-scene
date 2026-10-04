@@ -39,14 +39,13 @@ Browser environments, network stack mutations, and hosting utilities used to sec
 
 ---
 
-## 🚀 Kernel Exploits & Payloads
+## 🚀 Payloads
 
 Post-exploit software binaries that escape app sandboxes, patch system functions, or establish local listeners.
 
-*   **[ETAHEN](https://github.com)** - The standard homebrew enabler for the platform, bundling an integrated FTP engine, plugin systems, and cheat managers.
-*   **[Libhijacker](https://github.com)** - Run-time modification framework designed to break out of retail app constraints and sustain active background execution threads.
+*   **[ETAHEN](https://github.com/etaHEN/etaHEN)** - The standard homebrew enabler for the platform, bundling an integrated FTP engine, plugin systems, and cheat managers.
 *   **[PS5-kStuff](https://github.com)** - A kernel-level patch implementation used to authorize the execution of unsigned fPBR files.
-*   **[PS5-Payload-ElfLoader](https://github.com)** - A local network daemon that maps to an open TCP port on the console, waiting to execute incoming `.elf` payloads.
+*   **[itsPLK Payload Manager](https://github.com)** - A easy to use payload launcher capable of launching .elf and bins for supported ps5s
 
 ---
 
@@ -55,9 +54,7 @@ Post-exploit software binaries that escape app sandboxes, patch system functions
 Applications compiled specifically for the console's operating architecture using community SDK environments.
 
 *   **[HWInfo-PS5](https://github.com)** - Hardware monitor displaying live internal fan cycles, SoC temperatures, and active core clocks.
-*   **[Mast1c0re Network Game Loader](https://github.com)** - Injector client that targets the built-in PS4 backward compatibility layers via manipulated save games.
-*   **[PS5 Homebrew Store](https://github.com)** - Graphical storefront interface allowing users to browse, download, and patch community applications directly from the console UI.
-*   **[File Manager Placeholder](https://github.com)** - [PLACEHOLDER] A visual shell app built to navigate user directories on the internal `/data` partition.
+
 
 ---
 
@@ -65,9 +62,11 @@ Applications compiled specifically for the console's operating architecture usin
 
 Virtalization platforms optimized to run classic computing architectures natively on modern hardware.
 
-*   **[Mast1c0re PS1/PS2 Layer](https://github.com)** - Practical implementations targeting the console's native, internal PS2 emulation runtime using sandbox bypasses.
-*   **[RetroArch PS5 Port](https://github.com)** - Work-in-progress deployment of the modular frontend emulation framework targeting unlocked firmwares.
-
+*   **[swordpdf PS5SX PS5 Port]https://github.com/Swordpdf/PS5SX2 - a native port of PCSX2 to PS5 including 6x resolution .iso .chd .zso support patches/widescreen online play and more.
+*   **[mihawk-99 RetroArch PS5 Port]https://github.com/mihawk-99/PS5_RetroArch** - Work-in-progress deployment of the modular frontend emulation framework targeting unlocked firmwares.
+*   **[ZiZc3 XPSemu Xemu PS5 Port]https://github.com/ZiZc3/XPSemu - a original xbox emulator native on ps5.
+*   **blackbearreloaded Eden PS5 Port]https://github.com/blackbearreloaded/ProsperoEden - A switch emulator native on ps5 resolution settings, mods, and more.
+*   **[elripalda Dolphin PS5 Port]https://github.com/elripalda/Porpoise-Dolphin-Emulator-for-PS5 - A wii and gamecube emulator native on the PS5 up to 4x resolution, mods, and more
 ---
 
 ## 💾 Alternative OS & Linux
