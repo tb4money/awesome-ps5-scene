@@ -27,19 +27,13 @@ This repository catalogs open-source projects, reverse-engineering documentation
 
 Console security states are defined entirely by your system firmware revision. If you want to run custom code, keep your system completely offline and do not update.
 
-*   **Firmwares 1.00 - 2.50** — Vintage launch-era software. Highly sought after for low-level architecture mapping and hypervisor vulnerability research.
-*   **Firmwares 3.00 - 4.51** — The definitive homebrew target. Native compatibility with the WebKit/BD-J userland entry points paired with the IPV6 kernel exploit. Full write access to system memory via stable payload environments.
-*   **Firmwares 5.00 - 7.61** — The UMTX vulnerability threshold. These firmwares leverage the `bypervisor` implementation of the UMTX kernel exploit via the WebKit userland. Offers kernel read/write primitives, though hypervisor constraints remain active.
-*   **Firmwares 8.00 - 9.60** — Userland access limits. Vulnerable to the `PPPwn` PPPoE network stack exploit and specific WebKit entry points, but lacking a public, stable kernel-level execution chain.
-*   **Firmwares 10.00+** — Patched territory. Safe from all known public software entry points. 
-
----
+*   **Every firmware up to 13.60 is jailbreakable depending on your firmware some features such as fpkg support are still being developed for newer firmwares
 
 ## 🌐 Web Exploits & Entry Points
 
 Browser environments, network stack mutations, and hosting utilities used to secure userland code execution.
 
-*   **[BD-JB Host Core](https://github.com)** - Blu-ray Disc Java sandbox escape scripts utilized to kickstart code execution on disc-drive equipped hardware.
+*   **[BD-JB Host Core](https://github.com/Gezine/BD-JB5)** - Blu-ray Disc Java sandbox escape scripts utilized to kickstart code execution on disc-drive equipped hardware.
 *   **[PPPwn PS5 Port](https://github.com)** - A network-based PPPoE exploit configuration that targets memory corruption inside the console's network stack.
 *   **[UMTX WebKit Implementation](https://github.com)** - [PLACEHOLDER] Front-end browser scripts configured to trigger the UMTX kernel vulnerability on firmwares up to 7.61.
 
