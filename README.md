@@ -1,4 +1,4 @@
-# Awesome PS5 Homebrew & Scene [![Awesome](https://awesome.re)](https://awesome.re)
+# Awesome PS5 Homebrew & Scene [![Awesome](https://awesome.re/badge-flat.svg)](https://awesome.re)
 
 > A curated list of high-quality PlayStation 5 (PS5) homebrew, exploits, payloads, emulators, and system utilities.
 
