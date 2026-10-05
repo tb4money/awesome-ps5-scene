@@ -1,124 +1,120 @@
-# Awesome PS5 Homebrew & Scene [![Awesome](https://awesome.re/badge-flat.svg)](https://awesome.re)
+# Awesome PS5 Homebrew & Scene [![Awesome](https://awesome.re)](https://awesome.re)
 
-> A curated collection of working PlayStation 5 (PS5) homebrew projects, exploit implementations, payloads, emulators, and low-level development utilities.
+> A curated collection of working PlayStation 5 (PS5) homebrew apps, jailbreak setups, tools, and emulators.
 
-This repository catalogs open-source projects, reverse-engineering documentation, and software environments built by the console scene. 
+This repository is a master directory of free, open-source projects and guides built by the community to help you run custom software on your PlayStation 5.
 
-⚠️ **Strict Anti-Piracy Policy:** This list is strictly dedicated to homebrew creation, system security research, and custom emulation layers. Links to commercial game backups, cracked security keys, or illicit distribution channels are strictly prohibited and will be rejected immediately.
+⚠️ **Strict Anti-Piracy Policy:** This list is strictly for custom apps, security research, and retro game emulators. Links to commercial games, pirated downloads, or security-cracking keys are completely banned and will be deleted instantly.
 
 ---
 
-## 📑 Contents
+## :open_file_folder: Contents
 
 - [Firmware & Exploit Status](#-firmware--exploit-status)
 - [Web Exploits & Entry Points](#-web-exploits--entry-points)
-- [Kernel Exploits & Payloads](#-kernel-exploits--payloads)
+- [Jailbreak Payloads](#-jailbreak-payloads)
 - [Native Homebrew Apps](#-native-homebrew-apps)
-- [Emulators](#-emulators)
+- [Retro Emulators](#-retro-emulators)
 - [Alternative OS & Linux](#-alternative-os--linux)
 - [PC & Development Tools](#-pc--development-tools)
-- [Hardware Interfacing & UART](#-hardware-interfacing--uart)
-- [Research Documentation](#-research-documentation)
+- [App Libraries & Stores](#-app-libraries--stores)
 - [Scene Resources & News](#-scene-resources--news)
 
 ---
 
-## 🔑 Firmware & Exploit Status
+## :key: Firmware & Exploit Status
 
-Console security states are defined entirely by your system firmware revision. If you want to run custom code, keep your system completely offline and do not update.
+Your ability to modify your console depends entirely on your system's system software version (firmware). If you want to use these features, keep your console completely offline and do not update its software.
 
-*   **Every firmware up to 13.60 is jailbreakable depending on your firmware some features such as fpkg support are still being developed for newer firmwares
-
-## 🌐 Web Exploits & Entry Points
-
-Browser environments, network stack mutations, and hosting utilities used to secure userland code execution.
-
-*   **[BD-JB Host Core](https://github.com/Gezine/BD-JB5)** - Blu-ray Disc Java sandbox escape scripts utilized to kickstart code execution on disc-drive equipped hardware.
-*   **[PPPwn PS5 Port](https://github.com)** - A network-based PPPoE exploit configuration that targets memory corruption inside the console's network stack.
-*   **[UMTX WebKit Implementation](https://github.com)** - [PLACEHOLDER] Front-end browser scripts configured to trigger the UMTX kernel vulnerability on firmwares up to 7.61.
+*   Every PS5 system software version up to 13.60 is jailbreakable. However, depending on your exact version, some advanced features—like loading custom game packages—are still being actively worked on by community developers.
 
 ---
 
-## 🚀 Payloads
+## :globe_with_meridians: Web Exploits & Entry Points
 
-Post-exploit software binaries that escape app sandboxes, patch system functions, or establish local listeners.
+These are the starting points (like custom web pages or network tricks) used to unlock the console's software security when you first turn it on.
 
-*   **[ETAHEN](https://github.com/etaHEN/etaHEN)** - The standard homebrew enabler for the platform, bundling an integrated FTP engine, plugin systems, and cheat managers.
-*   **[PS5-kStuff](https://github.com)** - A kernel-level patch implementation used to authorize the execution of unsigned fPBR files.
-*   **[itsPLK Payload Manager](https://github.com)** - A easy to use payload launcher capable of launching .elf and bins for supported ps5s
-
----
-
-## 🎮 Native Homebrew Apps
-
-Applications compiled specifically for the console's operating architecture using community SDK environments.
-
-*   **[HWInfo-PS5](https://github.com)** - Hardware monitor displaying live internal fan cycles, SoC temperatures, and active core clocks.
-
+*   **[BD-JB Host Core](https://github.com)** - A method that uses the console's Blu-ray disc drive and special Java files to trigger a jailbreak.
+*   **[PPPwn PS5 Port](https://github.com)** - A network-based trick that uses an internet connection cable to confuse the console's network software and open a security loophole.
+*   **[UMTX WebKit Implementation](https://github.com)** - A web browser exploit file designed to unlock the console's deeper memory systems on system versions up to 7.61.
 
 ---
 
-## 🕹️ Emulators
+## :rocket: Jailbreak Payloads
 
-Virtalization platforms optimized to run classic computing architectures natively on modern hardware.
+These are small background programs you send to the console right after it is unlocked to activate features like FTP file transfers, mods, and custom app loading.
 
-*   **[swordpdf PS5SX PS5 Port]https://github.com/Swordpdf/PS5SX2** - a native port of PCSX2 to PS5 including 6x resolution .iso .chd .zso support patches/widescreen online play and more.
-*   **[mihawk-99 RetroArch PS5 Port]https://github.com/mihawk-99/PS5_RetroArch** - Work-in-progress deployment of the modular frontend emulation framework targeting unlocked firmwares.
-*   **[ZiZc3 XPSemu Xemu PS5 Port]https://github.com/ZiZc3/XPSemu** - a original xbox emulator native on ps5.
-*   **blackbearreloaded Eden PS5 Port]https://github.com/blackbearreloaded/ProsperoEden** - A switch emulator native on ps5 resolution settings, mods, and more.
-*   **[elripalda Dolphin PS5 Port]https://github.com/elripalda/Porpoise-Dolphin-Emulator-for-PS5** - A wii and gamecube emulator native on the PS5 up to 4x resolution, mods, and more
----
-
-## 💾 Alternative OS & Linux
-
-Custom boot environments, alternative kernels, and hardware-accelerated Linux distributions.
-
-*   **[PS5 Linux Kernel Fork](https://github.com)** - [PLACEHOLDER] Source modifications aiming to map individual hardware targets, including early attempts at custom Southbridge and GPU acceleration.
+*   **[ETAHEN](https://github.com)** - The standard "all-in-one" environment builder for the PS5. It turns on a built-in game cheat manager, system plug-ins, and a background computer file transfer setup.
+*   **[itsPLK Payload Manager](https://github.com)** - An easy-to-use background loader system designed to let you launch `.elf` and `.bin` program files over your home network.
+*   **[Lapy JB Daemon](https://github.com)** - A tool that runs silently in the background, allowing apps to access system privileges whenever they need them.
+*   **[PS5-kStuff](https://github.com)** - A fundamental system patch that tells the PS5 it is allowed to install and run homebrew packages.
 
 ---
 
-## 🛠️ PC & Development Tools
+## :video_game: Native Homebrew Apps
 
-Desktop compiler toolchains, network utilities, and decompilation resources used to build or parse payload binaries.
+Custom apps and tools made from scratch by independent developers to run directly on the PlayStation 5.
 
-*   **[Netcat GUI](https://github.com)** - Minimalist desktop dashboard used to broadcast compiled `.elf` assets to a designated local network IP.
-*   **[Prosper0g](https://github.com)** - Official diagnostics and scripts built to read out early firmware structures and configuration layers.
-*   **[PS5-Payload-SDK](https://github.com)** - Complete C/C++ development environment built on LLVM/Clang to facilitate native software compilation.
+*   *Contributions welcome! Submit a Pull Request following our submission guidelines to populate native applications.*
 
 ---
 
-## 🔌 Hardware Interfacing & UART
+## :joystick: Retro Emulators
 
-Motherboard revisions, serial communication interfaces, hardware glitching setups, and diagnostic trace methods.
+Programs designed to mimic older classic gaming hardware so you can play your retro favorites directly on modern equipment.
 
-*   **[UART Serial Logging Guide](https://github.com)** - [PLACEHOLDER] Schematic diagrams and console terminal setup steps detailing how to solder to the motherboard's TX/RX contact pads for low-level crash output logs.
-
----
-
-## 🔮 Research Documentation
-
-In-depth technical write-ups, vulnerability disclosures, and architectural security breakdowns.
-
-*   **[Bypervisor Exploit Notes](https://github.com)** - [PLACEHOLDER] Security write-up detailing the structure of the UMTX kernel vulnerability and its behavior alongside the hypervisor.
-*   **[PS5 Hypervisor Disclosures](https://github.com)** - Whitepapers and assembly documentation detailing secure memory structures and privilege levels by fail0verflow.
+*   **[Eden PS5 Port](https://github.com)** - A native Nintendo Switch emulator port modified to run on the PS5 with customizable graphic upgrades.
+*   **[Porpoise Dolphin Emulator](https://github.com)** - A custom GameCube and Wii emulator for the PS5 that can boost resolutions up to 4x sharpness.
+*   **[PS5SX PS5 Port](https://github.com)** - A native port of PCSX2 targeting PlayStation 2 virtualization with 6x internal resolution support for games, widescreen hacks, and online play.
+*   **[RetroArch PS5 Port](https://github.com)** - A massive all-in-one menu overlay that lets you organize and play thousands of classic games from old handhelds and home consoles.
+*   **[XPSemu Xemu PS5 Port](https://github.com)** - An Original Xbox console emulator built to work natively on the PS5 hardware architecture.
 
 ---
 
-## 🌐 Scene Resources & News
+## :floppy_disk: Alternative OS & Linux
 
-Aggregators and community databases hosting configuration files, step-by-step documentation, and verified release logs.
+Software configurations that let you bypass the standard PlayStation dashboard and run entirely different computer operating systems.
 
-*   **[PS5 Exploits Interactive Guide](https://moddedintentions.com)** - Step-by-step breakdown used to verify firmware versions and configure safe DNS filtering setups.
-*   **[PSX-Place Community Index](https://psx-place.com)** - Active developer forums housing hardware troubleshooting advice, technical logs, and release alerts.
-*   **[Wololo.net Blog](https://wololo.net)** - Longstanding platform news portal covering exploit disclosures, developer presentation notes, and open-source updates.
+*   **[PS5 Linux Loader](https://github.com)** - An experimental file loader created by developer TheOfficialFloW that forces the PS5 to turn into a desktop Linux computer on compatible system versions.
 
 ---
 
-## 🤝 Contribute
+## :hammer_and_wrench: PC & Development Tools
+
+Programs meant to run on your desktop computer to build custom code or send files directly to your console across your home network.
+
+*   **[Netcat GUI](https://github.com)** - A simple desktop application window used to instantly send app files over your home network directly to your console's IP address.
+*   **[PS5-Payload-SDK](https://github.com)** - The underlying programming toolkit that allows software developers to write their own custom C++ programs for the console.
+*   **[PS5Upload](https://github.com)** - A computer command tool used by programmers to send payloads and check system logs.
+
+---
+
+## :crystal_ball: App Libraries & Stores
+
+Graphical on-screen menus and independent app download systems built to run inside the console.
+
+*   **[Orbit Store](https://github.com)** - A custom software store dashboard designed to organize and index app files from public internet hosting libraries.
+*   **[Pegasus DL](https://github.com)** - A network download manager app that lets you add your own web sources from a text file to download tools directly to your console storage.
+*   **[Spectrum Library](https://github.com)** - A custom visual application catalog that lets you download and boot community homebrew projects directly from an attached hard drive.
+
+---
+
+## :desktop_computer: Scene Resources & News
+
+Websites, instructional setup walk-throughs, and message boards where you can follow live updates and look up system setup solutions.
+
+*   **[Modded Warfare](https://youtube.com)** - High-quality YouTube video tutorials that guide beginners step-by-step through jailbreaking and console customization.
+*   **[PS5 Exploits Interactive Guide](https://moddedintentions.com)** - A clean website guide used to check your system software version and learn how to block automatic internet updates.
+*   **[PSX-Place Community Index](https://psx-place.com)** - A long-running community forum where users share console hardware help, software troubleshooting advice, and news updates.
+*   **[Wololo.net Blog](https://wololo.net)** - A community news portal that tracks international security presentations and independent developer project updates.
+
+---
+
+## :handshake: Contribute
 
 Contributions are welcome! Please read the [Contribution Guidelines](contributing.md) to inspect our repository structural layout, lint rules, and alphabetical sorting requirements before opening a pull request.
 
-## 📝 License
+## :memo: License
 
 [![CC0](https://licensebuttons.net)](https://creativecommons.org)
 
