@@ -73,10 +73,6 @@ Programs designed to mimic older classic gaming hardware so you can play your re
 
 ## <img src="https://jsdelivr.net" width="22" height="22" align="center" /> Alternative OS & Linux
 
-Software configurations that let you bypass the standard PlayStation dashboard and run entirely different computer operating systems.
-
-*   **[PS5 Linux Loader](https://github.com)** - An experimental file loader created by developer TheOfficialFloW that forces the PS5 to turn into a desktop Linux computer on compatible system versions.
-
 ---
 
 ## <img src="https://jsdelivr.net" width="22" height="22" align="center" /> PC & Development Tools
