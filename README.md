@@ -8,7 +8,7 @@ This repository is a master directory of free, open-source projects and guides b
 
 ---
 
-## <img src="https://iconify.design" width="22" height="22" align="center" /> Contents
+## <img src="https://jsdelivr.net" width="22" height="22" align="center" /> Contents
 
 - [Firmware & Exploit Status](#-firmware--exploit-status)
 - [Web Exploits & Entry Points](#-web-exploits--entry-points)
@@ -22,7 +22,7 @@ This repository is a master directory of free, open-source projects and guides b
 
 ---
 
-## <img src="https://iconify.design" width="22" height="22" align="center" /> Firmware & Exploit Status
+## <img src="https://jsdelivr.net" width="22" height="22" align="center" /> Firmware & Exploit Status
 
 Your ability to modify your console depends entirely on your system's system software version (firmware). If you want to use these features, keep your console completely offline and do not update its software.
 
@@ -30,7 +30,7 @@ Your ability to modify your console depends entirely on your system's system sof
 
 ---
 
-## <img src="https://iconify.design" width="22" height="22" align="center" /> Web Exploits & Entry Points
+## <img src="https://jsdelivr.net" width="22" height="22" align="center" /> Web Exploits & Entry Points
 
 These are the starting points (like custom web pages or network tricks) used to unlock the console's software security when you first turn it on.
 
@@ -40,7 +40,7 @@ These are the starting points (like custom web pages or network tricks) used to 
 
 ---
 
-## <img src="https://iconify.design" width="22" height="22" align="center" /> Jailbreak Payloads
+## <img src="https://jsdelivr.net" width="22" height="22" align="center" /> Jailbreak Payloads
 
 These are small background programs you send to the console right after it is unlocked to activate features like FTP file transfers, mods, and custom app loading.
 
@@ -51,7 +51,7 @@ These are small background programs you send to the console right after it is un
 
 ---
 
-## <img src="https://iconify.design" width="22" height="22" align="center" /> Native Homebrew Apps
+## <img src="https://jsdelivr.net" width="22" height="22" align="center" /> Native Homebrew Apps
 
 Custom apps and tools made from scratch by independent developers to run directly on the PlayStation 5.
 
@@ -59,7 +59,7 @@ Custom apps and tools made from scratch by independent developers to run directl
 
 ---
 
-## <img src="https://iconify.design" width="22" height="22" align="center" /> Retro Emulators
+## <img src="https://jsdelivr.net" width="22" height="22" align="center" /> Retro Emulators
 
 Programs designed to mimic older classic gaming hardware so you can play your retro favorites directly on modern equipment.
 
@@ -71,7 +71,7 @@ Programs designed to mimic older classic gaming hardware so you can play your re
 
 ---
 
-## <img src="https://iconify.design" width="22" height="22" align="center" /> Alternative OS & Linux
+## <img src="https://jsdelivr.net" width="22" height="22" align="center" /> Alternative OS & Linux
 
 Software configurations that let you bypass the standard PlayStation dashboard and run entirely different computer operating systems.
 
@@ -79,7 +79,7 @@ Software configurations that let you bypass the standard PlayStation dashboard a
 
 ---
 
-## <img src="https://iconify.design" width="22" height="22" align="center" /> PC & Development Tools
+## <img src="https://jsdelivr.net" width="22" height="22" align="center" /> PC & Development Tools
 
 Programs meant to run on your desktop computer to build custom code or send files directly to your console across your home network.
 
@@ -89,7 +89,7 @@ Programs meant to run on your desktop computer to build custom code or send file
 
 ---
 
-## <img src="https://iconify.design" width="22" height="22" align="center" /> App Libraries & Stores
+## <img src="https://jsdelivr.net" width="22" height="22" align="center" /> App Libraries & Stores
 
 Graphical on-screen menus and independent app download systems built to run inside the console.
 
@@ -99,7 +99,7 @@ Graphical on-screen menus and independent app download systems built to run insi
 
 ---
 
-## <img src="https://iconify.design" width="22" height="22" align="center" /> Scene Resources & News
+## <img src="https://jsdelivr.net" width="22" height="22" align="center" /> Scene Resources & News
 
 Websites, instructional setup walk-throughs, and message boards where you can follow live updates and look up system setup solutions.
 
@@ -110,11 +110,11 @@ Websites, instructional setup walk-throughs, and message boards where you can fo
 
 ---
 
-## <img src="https://iconify.design" width="22" height="22" align="center" /> Contribute
+## <img src="https://jsdelivr.net" width="22" height="22" align="center" /> Contribute
 
 Contributions are welcome! Please read the [Contribution Guidelines](contributing.md) to inspect our repository structural layout, lint rules, and alphabetical sorting requirements before opening a pull request.
 
-## <img src="https://iconify.design" width="22" height="22" align="center" /> License
+## <img src="https://jsdelivr.net" width="22" height="22" align="center" /> License
 
 [![CC0](https://licensebuttons.net)](https://creativecommons.org)
 
